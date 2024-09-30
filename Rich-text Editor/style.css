@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    background-image: url(images/gradient-geometric-design-dark-background_23-2148425667.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Editor Container */
+  .editor-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Toolbar */
+  .editor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .editor-toolbar select,
+  .editor-toolbar button,
+  .editor-toolbar input[type="color"] {
+    background-color: #444;
+    border: none;
+    padding: 8px 10px;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editor-toolbar button i {
+    pointer-events: none;
+  }
+  
+  .editor-toolbar select:focus,
+  .editor-toolbar button:focus,
+  .editor-toolbar input[type="color"]:focus {
+    outline: none;
+    background-color: #555;
+  }
+  
+  .editor-toolbar select option {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  /* Editor */
+  .editor {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+  }
+  
+  .editor:empty:before {
+    content: attr(placeholder);
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  /* Fancy scrollbars */
+  .editor::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .editor::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  .editor::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  /* Button hover effects */
+  .editor-toolbar button:hover {
+    background-color: #555;
+  }
+  
+  /* Toolbar responsive adjustments */
+  @media (max-width: 600px) {
+    .editor-toolbar {
+      flex-wrap: wrap;
+    }
+  
+    .editor-toolbar select,
+    .editor-toolbar button,
+    .editor-toolbar input[type="color"] {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  
